@@ -1,0 +1,48 @@
+<h2>Replay Subject</h2>
+<div class="row">
+  <div class="col">
+    <h3>Add video</h3>
+  </div>
+</div>
+<hr />
+<div>
+  <div class="main">
+    <div>
+      <input class="input" type="text" #video />
+      <button class="button" (click)="onAddVideo(video.value)">Add</button>
+      <hr />
+    </div>
+
+    <div class="user-wrapper">
+      <div class="user-box">
+        <strong>User-1</strong>
+        <hr />
+        <ul *ngFor="let item of use1List" class="video-list">
+          <li >
+            <strong>Video : </strong>{{ item }}
+          </li>
+        </ul>
+      </div>
+      <div class="user-box">
+        <strong>User-2</strong>
+        <hr />
+        <ul  class="video-list">
+          <li *ngFor="let item of user2List">
+            <strong>Video : </strong>{{ item }}
+          </li>
+        </ul>
+        <button class="s-button" (click)="user2Subs()">{{subscription2?'Unubscribe':'Subscribe'}}</button>
+      </div>
+      <div class="user-box">
+        <strong>User-3</strong>
+        <hr />
+        <ul  class="video-list">
+          <li *ngFor="let item of user3List" >
+            <strong>Video : </strong>{{ item }}
+          </li>
+        </ul >
+        <button class="s-button" (click)="user3Subs()">{{subscription3?'Unubscribe':'Subscribe'}}</button>
+      </div>
+    </div>
+  </div>
+</div>

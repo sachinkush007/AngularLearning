@@ -1,0 +1,17 @@
+<div class="main">
+    <div class="input-fields">
+        <input type="text" placeholder="type here..." [(ngModel)]="task"/>
+        <button [disabled]="!task" (click)="addTask()">Add</button>
+       
+      </div>
+      <div class="todo-box">
+        <h2 *ngIf="list.length > 0" class="test">To do List</h2>
+        
+        <ul *ngIf="list.length > 0; else noTodos">
+          <app-to-do-entry  *ngFor="let item of list;let i = index" [masterName]=item.name [index]="i" (deleteTask)="deleteTask($event)"></app-to-do-entry>
+        </ul>
+        <ng-template #noTodos>
+          <p>No to-do items</p>
+        </ng-template>
+      </div>
+</div>

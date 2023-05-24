@@ -1,0 +1,13 @@
+<h3>Filter pipe</h3>
+<div>
+    <div class="input-fields">
+        <input type="text" placeholder="type here..." [(ngModel)]="task"/>
+        <button [disabled]="!task" (click)="addTask()">Add</button>
+       
+      </div>
+</div>
+<div>
+    <ul>
+        <li *ngFor="let item of list">{{item}}</li>
+      </ul>
+</div>

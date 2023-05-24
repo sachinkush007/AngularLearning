@@ -1,0 +1,27 @@
+<div>
+    <form>
+        <input type="file" (change)="onFileSelected($event)" />
+        <button (click)="onUpload()">Upload</button>
+    </form>
+    <div *ngFor="let photo of photos">
+        <img [src]="photo.url" alt="Uploaded photo" class="photo" />
+        <div style="display: flex; flex-wrap: wrap;">
+            <div>
+                <button (click)="onLike(photo)">Like</button>
+                <span>{{ photo.likes }} likes</span>
+            </div>
+            <div>
+                <!-- <form (submit)="onComment(photo, commentText.value)"> -->
+                    <input type="text" [(ngModel)]="commentText" />
+                    <button [disabled]="!commentText" (click)="onComment(photo)">Comment</button>
+
+                <!-- </form>   -->
+                <button (click)="onDelete(photo)">Delete</button>
+                <ul>
+                    <li *ngFor="let comment of photo.comments">{{ comment.text }}</li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</div>

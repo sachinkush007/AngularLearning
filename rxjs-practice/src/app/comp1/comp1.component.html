@@ -1,0 +1,14 @@
+<!-- Use for Subject -->
+<h1><b>Username is <span class="test-primary"></span>{{userName}}</b></h1>
+
+<div class="card">
+    <div class="container">
+      <h4><b>Username is <span class="test-primary"></span>{{userName}}</b></h4>
+      <input type="text" #uname>
+      <button (click)="onChange(uname.value)">Save</button>
+    </div>
+</div>
+<app-comp2></app-comp2> 
+<app-comp3></app-comp3>
+<app-replay-sub></app-replay-sub>
+

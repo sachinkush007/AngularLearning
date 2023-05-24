@@ -1,0 +1,34 @@
+
+<section id="main-content">
+  <section>
+
+    <div class="container">
+      <table class="table table-bordered table-striped">
+        <thead style="background-color: #24aee4">
+          <tr style="color: white">
+            <th>Candidate</th>
+            <th>Job Openings</th>
+            <th>Status</th>
+            <th>Last Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let hiring of hirings">
+            <td style="width: 30px;" >
+              <span>{{ hiring.candidate_info }}</span>
+            </td>
+            <td>
+              <span>{{ hiring.jobOpenings }}</span>
+            </td>
+            <td style="width: 270px ;">
+              <span>{{ hiring.status }}</span>
+            </td>
+            <td>
+              <span>{{ hiring.lastEmail }}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</section>

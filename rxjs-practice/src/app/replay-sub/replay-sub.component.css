@@ -1,0 +1,80 @@
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 6px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+  .input{
+    padding: 5px 32px;
+  }
+  .main{
+    display: flex;
+    height: 100vh;
+    margin-top: 20px;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .horizontal-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .horizontal-list li {
+    padding: 10px;
+    margin-right: 100px;
+    border: 1px solid #ccc;
+  }
+
+  .user-list {
+    list-style: none;
+    
+  }
+  
+  .user-list li {
+    margin-bottom: 10px;
+  }
+  
+  ul.video-list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  ul.video-list li {
+    margin-right: 10px;
+    background:#e7e9e7;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    display: block;
+  }
+  .user-box {
+    display: inline-block;
+    margin-right: 50px; /* optional, adds some spacing between boxes */
+    text-align: center;
+    
+  }
+  .s-button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 6px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+  
+  
+  

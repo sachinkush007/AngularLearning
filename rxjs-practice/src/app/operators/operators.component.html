@@ -1,0 +1,16 @@
+<h1>{{ title | uppercase}}</h1>
+<h4>{{title|slice:3:6|uppercase}}</h4>
+<h6>{{capString(oper)}}</h6>
+<h3>{{user|json|uppercase}}</h3>
+<h4>{{today|date:'fullDate'}}</h4>
+<h3>{{20|currency:'INR'}}</h3>
+<hr>
+<button>Click Me</button>
+<ul>
+
+    <li *ngFor="let item of filterdItmes">{{ item }}</li>
+  </ul>
+  <div [ngClass]="{ 'highlight': isHighlighted, 'error': isError }" [ngStyle]="{ 'font-size.px': fontSize }">This is a styled div</div>
+<button (click)="toggleHighlight()">Toggle Highlight</button>
+<button (click)="toggleError()">Toggle Error</button>
+<button (click)="increaseFontSize()">Increase Font Size</button>

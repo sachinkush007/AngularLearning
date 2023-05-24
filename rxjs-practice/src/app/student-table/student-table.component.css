@@ -1,0 +1,68 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    }
+    
+    th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+    background-color: #f2f2f2;
+    }
+    
+    button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    }
+    
+    .form-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #ccc;
+        background-color: #fff;
+        padding: 100px;
+        z-index: 9;
+        width: 300px;
+        box-shadow: 0px 0px 10px #ccc;
+        border-radius: 10px;
+    }
+    
+    .form-popup label {
+    display: block;
+    margin-bottom: 10px;
+    
+    }
+    
+    .form-popup input[type=text], .form-popup input[type=email],.form-popup input[type=depa], .form-popup input[type=tel] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+    }
+    
+    .form-popup input[type=submit], .form-popup button[type=button] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    }
+    
+    .form-popup input[type=submit]:hover, .form-popup button[type=button]:hover {
+    background-color: #3e8e41;
+    }

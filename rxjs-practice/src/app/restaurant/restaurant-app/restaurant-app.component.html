@@ -1,0 +1,35 @@
+<h1>Welcome to My Restaurant</h1>
+<div>
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/resto" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      </li>
+      <li><a routerLink="menu" routerLinkActive="active">Menu</a></li>
+      <li>
+        <a routerLink="reservation" [queryParams]="{ email: searchEmail }" routerLinkActive="active">Reservation</a>
+      </li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<ng-container *ngIf="isHomePage()">
+  <h2>Best Food in this Restaurant</h2>
+  <div class="food-container">
+    <div *ngFor="let food of bestFoods" class="food-item">
+      <img [src]="food.imageSrc" alt="Food Image" />
+      <h3>{{ food.name }}</h3>
+      <p>{{ food.description }}</p>
+    </div>
+  </div>
+</ng-container>
+
+<router-outlet></router-outlet>
+
+<footer>
+  <h2>Contact Us</h2>
+  <p>Phone: 8433112543</p>
+  <p>Email: info@restaurant.com</p>
+  <p>Address: Banana Streat Hathras</p>
+</footer>

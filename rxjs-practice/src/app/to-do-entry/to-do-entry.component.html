@@ -1,0 +1,13 @@
+
+<div>
+   
+    <li>
+      <span *ngIf="!editing" >{{ masterName}}</span>
+      <input type="text" *ngIf="editing" [(ngModel)]="masterName">
+      <button *ngIf="!editing" (click)="onEdit()">Edit</button>
+      <button *ngIf="editing" (click)="onSave()">Update</button>
+      <button (click)="onDelete()">Delete</button>
+  </li>
+  <br>
+  
+  </div>

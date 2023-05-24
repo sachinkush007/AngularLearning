@@ -1,0 +1,42 @@
+<button (click)="openForm()">Add Data</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Department</th>
+      <th>Phone</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of dataList">
+      <td>{{ data.name }}</td>
+      <td>{{ data.email }}</td>
+      <td>{{data.department}}</td>
+      <td>{{ data.phone }}</td>
+      
+    </tr>
+  </tbody>
+</table>
+
+<div class="form-popup" [ngStyle]="{'display': showForm ? 'block' : 'none'}">
+  <form (ngSubmit)="submitForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="formData.name"><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="formData.email"><br>
+
+    <label for="depa">Department:</label>
+    <input type="depa" id="depa" name="depa" [(ngModel)]="formData.department"><br>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" [(ngModel)]="formData.phone"><br>
+
+    <input type="submit" value="Submit">
+    <button type="button" (click)="closeForm()">Close</button>
+  </form>
+</div>
+
